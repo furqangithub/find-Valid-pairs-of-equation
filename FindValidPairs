@@ -1,0 +1,83 @@
+
+package javaapplication1;
+
+public class FindValidPairs {
+    
+    public static void main (String[] args){
+        
+        int x[] = new int[2000];
+        
+        for(int i=0; i<2000; i++){
+            x[i] = i+1;
+        }
+        
+         int y[] = new int[2000];
+        
+        for(int i=0; i<2000; i++){
+            y[i] = i+1;
+        }
+        
+         int z[] = new int[2000];
+        
+        for(int i=0; i<2000; i++){
+            z[i] = i+1;
+        }
+        
+        System.out.println("x^2 + y^2 = z^2");
+         System.out.println("This program find valid pairs form 1 to 2000 to solve the above equation:");
+        for(int j=0; j<2000; j++)
+        {
+           int leftside;
+           int rightside;
+           
+           for(int p=0; p<2000; p++)
+           {
+               
+               for(int t=0; t<2000; t++)
+               {
+                leftside = x[j]*x[j] + y[p]*y[p];
+                rightside = z[t]*z[t];
+                
+                   if(leftside == rightside)
+            {
+                System.out.println("("+x[j]+","+y[p]+","+z[t]+")");
+            }
+               }
+               
+           }
+     
+           
+        }
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("Bonus: Next Equation-");
+         System.out.println("x^3 + y^3 = z^3");
+         System.out.println("This program find valid pairs form 1 to 2000 to solve the above equation:");
+        for(int j=0; j<2000; j++)
+        {
+           int leftside;
+           int rightside;
+           
+           for(int p=0; p<2000; p++)
+           {
+               
+               for(int t=0; t<2000; t++)
+               {
+                leftside = x[j]*x[j]*x[j] + y[p]*y[p]*y[p];
+                rightside = z[t]*z[t]*z[t];
+                
+                   if(leftside == rightside)
+            {
+                System.out.println("("+x[j]+","+y[p]+","+z[t]+")");
+            }
+               }
+               
+           }
+     
+           
+        }
+        
+        
+    }
+}
